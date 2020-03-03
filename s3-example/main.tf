@@ -7,8 +7,10 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform-bucket-test" {
-  bucket = var.name
-  acl    = var.access
+  for_each = var.projects
+
+  bucket = each.value.name
+  acl    = each.value.access
   versioning {
     enabled = true
   }

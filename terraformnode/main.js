@@ -6,7 +6,7 @@ async function main () {
   var product = 'fake-product'
 
   output = await terraform(
-    `apply --terragrunt-source ${terraformRepo}?ref=s3-simple`,
+    `apply --terragrunt-source ${terraformRepo}?ref=s3-mapobject`,
     product,           
     {                      
       name: "sergsergrstgsrte-3453635",
