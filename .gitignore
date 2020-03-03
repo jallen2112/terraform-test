@@ -3,3 +3,5 @@
 */terraform.tfstate.backup
 */node_modules
 */tf_data
+**/.terraform
+codebuild-tutorial-2/terraform.tfvars
