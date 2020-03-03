@@ -15,7 +15,7 @@ async function setupCwd(productName, tfVars) {
 
   fs.writeFileSync(
     `${cwd}/terraform.tfvars`,
-    Object.entries(tfVars).map(e => `${e[0]} = "${e[1]}"`).join('\n'),
+    Object.entries(tfVars).map(e => `${e[0]} = ${e[1]}`).join('\n'),
   );
 
   return cwd;
