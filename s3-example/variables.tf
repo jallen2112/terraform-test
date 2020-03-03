@@ -1,6 +1,5 @@
-variable "projects" {
-  type = map(object({
-    name = string
-    access = string
-  })) 
+variable "name" {
+}
+
+variable "access" {
 }
