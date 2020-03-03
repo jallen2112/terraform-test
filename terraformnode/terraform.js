@@ -6,9 +6,9 @@ const rimraf = require('rimraf');
 
 const readFileAsync = promisify(fs.readFile);
 
-async function setupCwd(productName,fVars) {
+async function setupCwd(productName, tfVars) {
   let productbackend;
-  const cwd = `/tf_data/${productName}`;
+  const cwd = `./tf_data/${productName}`;
   fs.mkdirSync(cwd, { recursive: true });
   productbackend = 'backend-local';
   fs.copyFileSync(`terragrunt-${productbackend}.hcl`, `${cwd}/terragrunt.hcl`);

@@ -1,7 +1,20 @@
-//const terraform = require('./terraform.js');
+const terraform = require('./terraform.js');
 
-function main () {
+async function main () {
   console.log("hello-world")
+  var terraformRepo = `github.com/jallen2112/terraform-test//s3-example`
+  var product = 'fake-product'
+
+  output = await terraform(
+    `apply --terragrunt-source ${terraformRepo}?ref=s3-simple`,
+    product,           
+    {                      
+      name: "sergsergrstgsrte-3453635",
+      access: "public",
+    },                     
+  );                       
+  console.log("goodbye-world")
+  
 }
 
 main()
